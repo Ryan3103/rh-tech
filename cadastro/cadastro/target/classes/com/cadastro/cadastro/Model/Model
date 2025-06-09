@@ -1,0 +1,25 @@
+@Entity
+public class Funcionario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nome;
+    private String cpf;
+    private String email;
+    
+    @ManyToOne
+    @JoinColumn(name = "cargo_id")
+    private Cargo cargo;
+    
+}
+
+@Entity
+public class Cargo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nome;
+    private String descricao;
+    private Double salarioBase;
+    
+}
