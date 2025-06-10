@@ -1,5 +1,0 @@
-public interface FuncionarioRepository extends JpaRepository<Funcionario, Long> {
-}
-
-public interface CargoRepository extends JpaRepository<Cargo, Long> {
-}
